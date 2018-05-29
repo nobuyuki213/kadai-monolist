@@ -22,7 +22,7 @@
                             <li><a href="#">Separated link</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">新規登録</a></li>
+                    <li><a href="{{ route('signup.get') }}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 新規登録</a></li>
                     <li><a href="#">ログイン</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
