@@ -1,5 +1,5 @@
 @if (count($errors) > 0)
-    @foreach($errors as $error)
-        <div class="alert aleat-waning" role="aleat">{{ $error }}</div>
+    @foreach($errors->all() as $error)
+        <div class="alert alert-warning text-center" role="alert">{{ $error }}</div>
     @endforeach
 @endif
