@@ -16,5 +16,6 @@
 @endsection
 
 @section('content')
-    コンテンツ
+    @include('items.items')
+    {!! $items->render() !!}
 @endsection
