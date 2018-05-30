@@ -24,8 +24,8 @@
                         {!! Form::password('password', ['class' => 'form-control', 'placeholder' => '6文字以上の半角英数字']) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::label('password_confirmaiton', 'パスワード（確認）') !!}
-                        {!! Form::password('password_confirmaiton', ['class' => 'form-control', 'placeholder' => 'パスワード確認用']) !!}
+                        {!! Form::label('password_confirmation', 'パスワード（確認）') !!}
+                        {!! Form::password('password_confirmation', ['class' => 'form-control', 'placeholder' => 'パスワード確認用']) !!}
                     </div>
                     <div class="text-right">
                         {!! Form::button('登録する <span class="glyphicon glyphicon-check" aria-hidden="true"></span>', ['class' => 'btn btn-success', 'type' => 'submit']) !!}
