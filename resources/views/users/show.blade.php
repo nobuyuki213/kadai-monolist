@@ -18,12 +18,12 @@
                         {{ $count_want }}
                     </div>
                 </li>
-                <!--<li>-->
-                <!--    <div class="status-label">WANT</div>-->
-                <!--    <div class="status-value" id="have_count">-->
-                            
-                <!--    </div>-->
-                <!--</li>-->
+                <li>
+                    <div class="status-label">HAVE</div>
+                    <div class="status-value" id="have_count">
+                        {{ $count_have }}
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

@@ -44,7 +44,7 @@ class ItemsController extends Controller
     public function show($id)
     {
         $item = Item::find($id);
-        $want_users = $item->want_users;
+        $want_users = $item->want_users()->get();
         
         return view('items.show', [
             'item' => $item,
