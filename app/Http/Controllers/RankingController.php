@@ -13,7 +13,7 @@ class RankingController extends Controller
     // want ランキングの取得
     public function ranking()
     {
-        $type = studly_case(request()->type);
+        $type = request()->type;
         
         $items = \DB::table('item_user')
                     ->join('items', 'item_user.item_id', '=', 'items.id')
@@ -21,6 +21,8 @@ class RankingController extends Controller
                         ->where('type', $type)
                         ->groupBy('items.id', 'items.code', 'items.name', 'items.url', 'items.image_url', 'items.created_at', 'items.updated_at')
                         ->orderBy('count', 'DESC')->take(10)->get();
+        
+        $type = studly_case($type);
         
         return view('ranking.ranking', [
             'items' => $items,
