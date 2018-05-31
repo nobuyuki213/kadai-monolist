@@ -61,7 +61,7 @@ footer {
  
 /* item */
 .item .panel-body {
-    height: 70px;
+    height: 120px;
 }
 
 .item .panel-heading {
@@ -71,10 +71,6 @@ footer {
 .item .panel-heading img {
     height: 100%;
     max-width: 100%;
-}
-
-.item .panel-body {
-    height: 120px;
 }
 
 .item .buttons form {

@@ -24,8 +24,8 @@
                                 <span class="glyphicon glyphicon-signal" aria-hidden="true"></span> ランキング <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ route('ranking.want') }}">Wantランキング</a></li>
-                                <li><a href="#">Haveランキング</a></li>
+                                <li>{{ link_to_route('ranking.ranking', 'Wantランキング', ['type' => 'want']) }}</li>
+                                <li>{{ link_to_route('ranking.ranking', 'Haveランキング', ['type' => 'have']) }}</li>
                             </ul>
                         </li>
                         <li class="dropdown">

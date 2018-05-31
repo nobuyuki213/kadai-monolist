@@ -12,9 +12,10 @@
                     </div>
                     <div class="panel panel-body">
                         <p class="item-title">{{ $item->name }}</p>
-                        <div class="button text-center">
+                        <div class="buttons text-center">
                             @if (Auth::check())
                                 @include('items.want_button', ['item' => $item])
+                                @include('items.have_button', ['item' => $item])
                             @endif
                         </div>
                     </div>
@@ -41,6 +42,9 @@
                         haveしたユーザ
                     </div>
                     <div class="panel panel-body">
+                        @foreach ($have_users as $user)
+                            <a href="{{ route('users.show', $user->id) }}">{{ $user->name }}</a>
+                        @endforeach
                     </div>
                 </div>
             </div>

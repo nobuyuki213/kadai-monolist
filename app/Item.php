@@ -28,6 +28,6 @@ class Item extends Model
     // item を have している user達を取得
     public function have_users()
     {
-        return $this->users()->where('type'. 'have');
+        return $this->users()->where('type', 'have');
     }
 }

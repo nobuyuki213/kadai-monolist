@@ -11,17 +11,20 @@ use App\Item;
 class RankingController extends Controller
 {
     // want ランキングの取得
-    public function want()
+    public function ranking()
     {
+        $type = studly_case(request()->type);
+        
         $items = \DB::table('item_user')
                     ->join('items', 'item_user.item_id', '=', 'items.id')
                         ->select('items.*', \DB::raw('COUNT(*) as count'))
-                        ->where('type', 'want')
+                        ->where('type', $type)
                         ->groupBy('items.id', 'items.code', 'items.name', 'items.url', 'items.image_url', 'items.created_at', 'items.updated_at')
                         ->orderBy('count', 'DESC')->take(10)->get();
         
-        return view('ranking.want', [
+        return view('ranking.ranking', [
             'items' => $items,
+            'type' => $type,
             ]);
     }
 }
